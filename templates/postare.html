@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../static/postare.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post</title>
+</head>
+<body>
+    <header>
+        <a href="./"><h1>Fible</h1></a>
+        <a href="./profile/{{user.user}}">
+            <div>Profile</div>
+        </a>
+    </header>
+    <div>.</div>
+
+    <div class="create-post">
+        
+        <div class="submit">
+            <form action="postare" method="POST" enctype="multipart/form-data">
+                
+                {% csrf_token %}
+                <input type="file" id="file" name="image">
+                <label for="file">+Choose a photo</label>
+                <input type="text" name="caption">
+            
+                <button>
+                    <svg xmlns="http://www.w3.org/2000/svg"  class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                    </svg>
+                </button>
+              
+            </form>
+        </div>
+    </div>
+</body>
+</html>

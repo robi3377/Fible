@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+    <link rel="stylesheet" href="../static/prieteni.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prieteni</title>
+</head>
+<body>
+    <header>
+        <a href="./"><h1>Fible</h1></a>
+        <a href="../profile/{{user.user}}">
+            <div>Profile</div>
+        </a>
+    </header>
+    <div>.</div>
+
+    <div class="friend-list">
+        <!-- <div class="search">
+            <form action="">
+                <input type="text">
+           </form>
+           <button>Search friend</button>
+        </div> -->
+        <div class="search">
+        <h1>Following</h1>
+        </div>
+       <div class="container">
+        {% for follow in following %}
+            <a href="../profile/{{follow.user}}">
+                <div class="profiles">
+                    <div class="profile-info">
+                        <div class="image" style="background-image:url('{{follow.user_img.url}}') ;"></div>
+                        <div>{{follow.user}}</div>
+                    </div>
+                    <!-- <button>Add friend</button> -->
+                </div>
+            </a>
+        {% endfor %}
+            <!-- <div class="profiles"></div>                        
+            <div class="profiles"></div>
+            <div class="profiles"></div>
+            <div class="profiles"></div>
+            <div class="profiles"></div>
+            <div class="profiles"></div>
+            <div class="profiles"></div>                        
+            <div class="profiles"></div>
+            <div class="profiles"></div>
+            <div class="profiles"></div>
+            <div class="profiles"></div> -->
+       </div>
+
+    </div>
+</body>
+</html>

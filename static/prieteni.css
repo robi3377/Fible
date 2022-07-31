@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@500&display=swap');
+
+body{
+    margin: 0;
+    height: auto;
+    background-color: #FAFAFF;
+    font-family: 'Cabin', sans-serif;
+}
+header{
+    margin-top: 0px;
+    width: 100%;
+    background-color: #FAFAFF;
+    position: fixed;
+    height: 3em;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+
+    border-bottom: 3px solid #E3655B;
+}
+
+header >a >h1{
+    margin-left: 20px;
+}
+header > a{
+    color: #E3655B;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.friend-list{
+    margin: 50px auto;
+    width: 60%;
+    height: 80vh;
+
+    background-color: #ffff;
+
+    border: 2px solid gray;
+    border-radius: 20px;
+
+    display: grid;
+    grid-template-rows: 1fr 7fr;
+}
+.search{
+    margin: 0px auto;
+    padding: 30px 0px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid gray;
+}
+form{
+    width: 60%;
+}
+input{
+    width: 100%;
+}
+button{
+    margin-left: 10px;
+    height: 22px;
+    right: 30px;
+}
+.container{
+    overflow: hidden;
+    overflow-y: scroll;
+    margin: 15px auto;
+    width: 90%;
+    display: grid;
+    gap: 1em;
+
+}
+.profiles{
+    height: 50px;
+    border-radius: 10px ;       
+
+    display: flex;                  
+    flex-direction: row;            
+    align-items: center;            
+    justify-content: space-between;
+    box-shadow: 10px 10px 10px #888888;
+
+}
+:root{
+    --mg-left: 15px;
+}
+.profile-info{ 
+    margin-left: var(--mg-left);
+    display: flex;                  
+    flex-direction: row;
+    align-items: center;   
+}
+.image{
+    margin: var(--mg-left);
+    height: 30px;
+    width: 30px;
+
+    border-radius: 50%;
+    border: 1px solid gray;
+    background-size: cover;
+    background-position: center;
+}
+button{
+    margin-right: var(--mg-left);
+}
+
+@media screen and (max-width:800px) {
+    .friend-list{
+        min-height: 70vh;
+        width: 100%;
+        border: none;
+        border-radius: 0px;
+    }
+}

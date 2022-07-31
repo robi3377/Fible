@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@500&display=swap');
+
+body{
+    margin: 0;
+    height: 100vh;
+    background-color: #FAFAFF;
+    font-family: 'Cabin', sans-serif;
+}
+header{
+    margin-top: 0px;
+    width: 100%;
+    background-color: #FAFAFF;
+    position: fixed;
+    height: 3em;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+
+    border-bottom: 3px solid #E3655B;
+}
+
+header >a >h1{
+    margin-left: 20px;
+}
+header > a{
+    color: #E3655B;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.create-post{
+    margin: 50px auto;
+    width: 60%;
+    height: 80vh;
+
+    background-color: #ffff;
+
+    border: 2px solid gray;
+    border-radius: 20px;
+
+
+
+}
+
+/* .image{
+    border-radius: 15px 15px 0px 0px;
+    margin: 10px auto;
+    width: 95%;
+    background-color: black;
+    border: gray solid 2px;
+    border-radius: 20px ;
+} */
+
+.submit{
+    height: 100%;
+    width: 90%;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+form{
+    height: 90%;
+    width: 80%;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 4fr 1fr;
+}
+
+form > :nth-child(2){
+    display: none;
+}
+label{
+    border-radius: 10px 10px 0px 0px;
+    background-color: #E3655B;
+
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+input{
+    height: 2em;
+    /* width: 20em; */
+}
+
+button{
+    border: none;
+    background-color: #ffff;
+    border-radius: 50% ;
+}
+
+svg{
+    height: 3em;
+    overflow: hidden;
+}
+
+@media screen and (max-width:800px) {
+    .create-post{
+        min-height: 70vh;
+        width: 100%;
+        border: none;
+    }
+}

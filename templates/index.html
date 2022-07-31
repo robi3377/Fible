@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../static/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Home</title>
+</head>
+<body>
+    <header>
+        <a href="./"><h1>Fible</h1></a>
+
+        <a href="./search">
+            <i class="fa fa-search fa-2x"></i>
+        </a>
+
+        <a href="./profile/{{user.user}}">
+            <div>Profile</div>
+        </a>
+    </header>
+    <div>.</div>
+    <div class="contents">
+        <div class="posts">
+            {% for post in posts reversed%}
+            <div class="post">
+                <div class="user">
+                    <div class="image" style="background-image:url('{{post.user_img.url}}') ;"></div>
+                    {{post.user}}
+                </div>
+                <div class="photo" style="background-image: url('{{post.image.url}}');"></div>
+                <div class="text">
+                    <div>{{post.caption}}</div> 
+                    {{post.no_of_likes}}
+                    <a href="/like?post_id={{post.id}}">
+                        <button>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30px" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                            </svg>
+                        </button>
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        
+        <div>
+            <div class="description">
+                <div class="user-profile">
+                    <a href="./profile/{{user.user}}">   
+                        <div class="user-profile-photo" style="background-image: url('{{user.profile_img.url}}')"></div>
+                    </a>
+                    <a href="./profile/{{user.user}}" style="text-decoration:none;">   
+                        <div class="user-name">{{user.user}}</div>                    
+                    </a>
+
+                    <div class="user-profile-info">
+
+                        {% if nr_postari == 1 %}
+                        <div style="margin: auto;">{{nr_postari}} post</div>
+                        {% else %}
+                        <div style="margin: auto;">{{nr_postari}} posts</div>
+                        {% endif %}
+                        
+                        <a href="./prieteni/{{user.user}}" class="btn">
+                            <div >{{user.following}} following</div>
+                        </a>
+                        <a href="./postare" class="btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20px" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+                              </svg>
+                        </a>
+            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

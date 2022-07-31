@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@500&display=swap');
+
+:root{
+    --hdr-hgt: 3em;
+}
+
+body{
+    margin: 0;
+    height: auto;
+    background-color: #FAFAFF;
+    font-family: 'Cabin', sans-serif;
+}
+header{
+    margin-top: 0px;
+    width: 100%;
+    background-color: #FAFAFF;
+    position: fixed;
+    height: var(--hdr-hgt);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+
+    border-bottom: 3px solid #E3655B;
+}
+
+header >a >h1{
+    margin-left: 20px;
+}
+header > a{
+    color: #E3655B;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.container{
+    margin: auto;
+    height: calc(100vh - var(--hdr-hgt));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.settings{
+    height: 25em;
+    width: 25em;
+    border: 2px solid gray;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form > :nth-child(2){
+    display: none;
+}
+label{
+    background-color: #E3655B;
+    color: #FAFAFF;
+
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.settings > * > input{
+    margin-bottom: 30px;
+}
