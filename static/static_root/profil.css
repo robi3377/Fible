@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@500&display=swap');
+
+body{
+    margin: 0;
+    height: auto;
+    background-color: #FAFAFF;
+    font-family: 'Cabin', sans-serif;
+}
+header{
+    margin-top: 0px;
+    width: 100%;
+    background-color: #FAFAFF;
+    position: fixed;
+    height: 3em;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+
+    border-bottom: 3px solid #E3655B;
+}
+
+header >a >h1{
+    margin-left: 20px;
+}
+header > a{
+    color: #E3655B;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.user-profile{
+    
+    height: 30em;
+    width: 60%;
+    margin: 5em auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.user-profile-photo{
+    height: 30em;
+    width: 20em;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-image: url('https://images.unsplash.com/photo-1554151228-14d9def656e4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=386&q=80');
+    background-size: cover;
+    background-position: center;
+
+    border: 5px solid #41463D;
+    border-radius: 100%;
+}
+.user-name{
+    color: #41463D;
+
+    margin: 20px 0px;
+    font-size: clamp(1.5em,3vw,2em);;
+}
+.user-profile-info{
+    margin-top: 30px;
+    height: 20%;
+    width: 100%;    
+
+    color: #41463D;
+
+    display: grid;
+    /* gap: 1em; */
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+
+    border-bottom: 2px solid #41463D;
+
+    font-size: clamp(1.5em,2vw,2em);
+}
+
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 2px solid #41463D;
+    color: #41463D;
+    text-decoration: none;
+}
+
+.user-content{
+    margin: auto;
+    width:70% ;
+    height: auto;
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(auto-fit, 280px);
+    grid-auto-rows: 330px;
+
+    justify-content: center;
+}
+.user-content-post{
+    min-width: 40%;
+    border:  2px solid black;
+    background-color: #293241;
+
+    
+
+    display: grid;
+    grid-template-rows: 280px auto;
+
+    /* border-radius: 10px; */
+}
+.user-content-photo{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* border-radius: 10px 10px 0px 0px; */
+}
+
+.user-content-text{
+    margin: auto 15px;
+    color: aliceblue;
+    font-size:clamp(1.5em,1vw,2em);
+}
+
+@media screen and (max-width: 800px) {
+    .user-profile{
+        width: 100%;
+    }
+    
+    .user-content{
+        width:100% ;
+
+    }
+    
+}
